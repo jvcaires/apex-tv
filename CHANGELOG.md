@@ -4,7 +4,7 @@
 
 - Add an International commentary language submenu, saved manual feed/language choices, and consistent language-code matching. Cancel stale lookups, clear account preferences on sign-out, and keep audio selections scoped to their feed.
 - Add a Chromium 63-compatible build and guarded runtime helpers for Tizen 5.0/5.5, with a direct AVPlay path on legacy TVs. Preserve the Tizen 6+ worker relay path and include runtime helpers in future signed menu bundles.
-- Contributor-reported Tizen 5.5 playback is documented separately from integration tests. Tizen 5.0 hardware and physical regression testing of the integrated changes remain pending.
+- Contributor-reported Tizen 5.5 playback is documented separately from integration tests, including about 70 minutes of uninterrupted live Free Practice 1 with camera and commentary switching on 2026-10-23. DRM licence rotation remains unverified by the setup check. Tizen 5.0 hardware and physical regression testing of the integrated changes remain pending.
 - These changes are source-only until a new release is tested and published. The public 0.5.11 downloads and signed update feed remain unchanged.
 
 ## 0.5.11 — 2026-10-15

@@ -16,7 +16,8 @@ O build mira em `chrome63`, o menor dos dois, e por isso o mesmo `.wgt` serve pa
 | Apex TV | 0.5.11, revisão do menu `68dbb7b529dfd073f2c2f032` |
 | Resultado | `f1-playback-confirmed`: imagem e som confirmados no teste básico e no teste com conteúdo F1; atalho na Home confirmado |
 | Player | **AVPlay nativo + Widevine**, abrindo o DASH da F1 direto (o player de compatibilidade não foi necessário) |
-| Não verificado | Registro da licença F1 comum e renovação da licença DRM numa transmissão ao vivo longa (por exemplo, um GP inteiro) |
+| Sessão ao vivo | Treino Livre 1 ao vivo em 23/10/2026: cerca de 70 minutos contínuos, sem interrupção; troca de câmera/POV e de narração durante a sessão funcionou |
+| Não verificado | Registro da licença F1 comum; a renovação da licença DRM continua marcada como não verificada no teste do app, e um GP inteiro ainda não foi assistido |
 
 O Tizen 5.0 (2019) ainda não foi testado em uma TV real.
 
@@ -78,8 +79,9 @@ localmente com o seu certificado Samsung no momento da instalação.
 
 ## Limites conhecidos
 
-- Falta confirmar uma transmissão ao vivo longa, porque é nela que acontece a renovação da licença DRM.
-  Se o vídeo cair depois de 30 a 60 minutos com erro de DRM, a causa provável é essa.
+- Um treino ao vivo de 70 minutos rodou sem interrupção, o que indica que a renovação da licença DRM funciona.
+  Mesmo assim, a renovação não foi observada diretamente, e uma corrida é mais longa. Se o vídeo cair com erro
+  de DRM numa sessão longa, a causa provável é essa.
 - O AVPlay direto não recebe as correções de horário e de áudio CBCS que o relay faz no Tizen 6.
   No UN43TU7000 elas não foram necessárias; em outros modelos, use o player de compatibilidade se a imagem ou o som falharem.
 - O Chromium 63 não tem `focus({preventScroll})`. O foco funciona, mas a rolagem pode "pular" um pouco ao navegar.

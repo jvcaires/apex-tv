@@ -16,12 +16,14 @@ serves both.
 | Apex TV | 0.5.11, menu revision `68dbb7b529dfd073f2c2f032` |
 | Result | `f1-playback-confirmed`: basic and F1 picture and audio confirmed with the in-app setup check; Add to Home confirmed |
 | Engine | Native **AVPlay + Widevine**, opening the F1 DASH URL directly (the compatibility player was not needed) |
-| Unverified | Ordinary F1 licence observation, licence/key rotation during a long live session (e.g. a full Grand Prix) |
+| Live session | Live Free Practice 1 on 2026-10-23: about 70 minutes of continuous playback with no interruption; switching camera/POV and commentary during the session worked |
+| Unverified | Ordinary F1 licence observation; licence/key rotation is still reported as unverified by the setup check, and a full Grand Prix has not been watched |
 
 Tizen 5.0 (2019) has not been tested on a real TV yet.
 
 This report describes the contributor’s build, not a fresh test of later integration changes.
-Replay versus live content was not recorded. Tizen 6+ also requires regression testing
+The setup-check report did not record replay versus live content; the live session above is a
+separate observation by the contributor on the same TV. Tizen 6+ also requires regression testing
 after integration; automated checks alone do not prove playback.
 
 ## What changed
@@ -61,7 +63,8 @@ The unsigned package is written to `dist/Apex-TV.wgt`; install it with Apps2Sams
 ## Known limitations
 
 - Chromium 63 has no `focus({preventScroll})`. Focus works, but scrolling may jump slightly while navigating.
-- A long live session has not been confirmed yet; DRM licence renewal happens there. If video stops
-  after 30–60 minutes with a DRM error, that is the likely cause.
+- A 70-minute live practice session played without interruption, which suggests licence renewal works,
+  but rotation has not been observed directly and a full race is longer. If video stops with a DRM error
+  during a long session, licence renewal is the likely cause.
 - Direct AVPlay playback does not get the timestamp and CBCS audio corrections of the Tizen 6 relay.
   They were not needed on the UN43TU7000; on other models, use the compatibility player if picture or sound misbehave.
